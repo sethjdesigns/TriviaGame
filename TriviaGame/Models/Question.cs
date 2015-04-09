@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TriviaGame.Models
 {
+
     public class Questions
     {
         public int Id { get; set; }

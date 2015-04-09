@@ -3,6 +3,7 @@
     var self = this;
     self.questions = ko.observableArray();
     self.error = ko.observable();
+    self.detail = ko.observableArray();
 
     var questionsUri = '/api/questions/';
 
@@ -24,6 +25,14 @@
             self.questions(data);
         });
     }
+
+    self.getQuestionDetail = function (item) {
+        ajaxHelper(questionsUri + item.Id, 'GET').done(function (data) {
+            self.detail(data);
+        });
+    }
+
+   
 
     getAllQuestions();
 

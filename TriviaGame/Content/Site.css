@@ -15,3 +15,19 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.nav-list li {
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #d7d7d7;
+    border-radius: 5px;
+}
+
+.nav-list {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
