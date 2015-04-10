@@ -4,32 +4,40 @@
 
 <div class="page-header">
     <h1>Trivia App</h1>
+    <h2>Litterally the best quiz application ever built.</h2>
 </div>
 
+
+ <!-- ko if:detail() -->
 <div class="row">
 
-
+   
     <div class="col-md-8 col-md-push-2">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <strong></strong><h2 class="panel-title" data-bind="text: detail().Question"></h2></strong>
             </div>
-            
-            <table class="table">
-                <tr><td data-bind="text: detail().Answer1"></td></tr>
-                <tr><td data-bind="text: detail().Answer2"></td></tr>
-                <tr><td data-bind="text: detail().Answer3"></td></tr>
-                <tr><td data-bind="text: detail().Answer4"></td></tr>
-            </table>
+
+            <div class="answers">
+                <div class="row">
+                    <div class="col-md-6"><button data-bind="text: detail().Answer1, value: detail().Answer1" onclick="alert(this.value)" id="answer1"></button></div>
+                    <div class="col-md-6"><button data-bind="text: detail().Answer2, value: detail().Answer2" onclick="alert(this.value)" id="answer2"></button></div>
+                    <div class="col-md-6"><button data-bind="text: detail().Answer3, value: detail().Answer3" onclick="alert(this.value)" id="answer3"></button></div>
+                    <div class="col-md-6"><button data-bind="text: detail().Answer4, value: detail().Answer4" onclick="alert(this.value)" id="answer4"></button></div>
+                    <div class="col-md-6 correct-answer"><button data-bind="text: detail().CorrectAnswer, value: detail().CorrectAnswer" id="correctanswer"></button></div>
+                </div>
+            </div>
         </div>
     </div>
+    
     <div class="clearfix"></div>
-    <div class="col-md-4 col-md-push-4">
+    <div class="col-md-8 col-md-push-2">
         <ul class="list-unstyled nav-list" data-bind="foreach: questions">
             <li>
-               <small><a href="#" data-bind="click: $parent.getQuestionDetail"><span data-bind="text: Id"></span></a></small>
+                <small><a href="#" data-bind="click: $parent.getQuestionDetail"><span data-bind="text: Id"></span></a></small>
             </li>
         </ul>
     </div>
 
 </div>
+<!-- /ko -->

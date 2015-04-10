@@ -20,14 +20,58 @@ textarea {
     float: left;
     text-align: center;
     font-size: 1.5em;
-    margin-left: 20px;
+    margin-left: 3%;
     padding: 10px;
     background-color: #d7d7d7;
     border-radius: 5px;
+    width: 15%;
 }
 
 .nav-list {
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.answers button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #808080;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: #333 0 4px;
+}
+
+    .answers button:hover {
+        opacity:.7;
+    }
+
+.page-header h1,.page-header h2 {
+    text-align: center;
+}
+
+.page-header h1 {
+    text-transform: uppercase!important;
+    font-weight: bold;
+}
+
+ .page-header h2 {
+    color: #555;
+}
+
+.panel-title {
+    text-align: center;
+    font-size: 2em;
+}
+
+.correct-answer {
+    display: none;
 }
