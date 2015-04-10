@@ -34,22 +34,24 @@
 
     getAllQuestions();
 
+    //Evaluate the selection
+    $('button').click(function () {
+
+        if ($(this).attr("value") === $('#correctanswer').attr("value"))
+        {
+            $(this).addClass('correct');
+        }
+
+        else
+        {
+            $(this).addClass('fail');
+        }
+
+    });
+
 };
 
-$('button').click(function () {
-
-    if ($(this).attr("value") === $('#correctanswer').attr("value")) {
-
-        $(this).addClass('correct');
-    }
-
-    else
-    {
-        $(this).addClass('fail');
-    }
-    
-});
-
+//Reset CSS changes when bringing up a new question
 $('.nav-list').click(function () {
     if ($('button').hasClass('correct'))
     {
