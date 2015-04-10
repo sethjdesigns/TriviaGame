@@ -36,4 +36,18 @@
 
 };
 
+$('button').click(function () {
+
+    if ($(this).attr("value") === $('#correctanswer').attr("value")) {
+
+        $(this).css({ 'background-color': '#00E600' });
+    }
+
+    else
+    {
+        $(this).css({ 'background-color': 'red' });
+    }
+
+});
+
 ko.applyBindings(new ViewModel());
