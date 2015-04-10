@@ -75,3 +75,11 @@ textarea {
 .correct-answer {
     display: none;
 }
+
+.correct {
+    background-color: #00FF00!important;
+}
+
+.fail {
+    background-color: #FF0000!important;
+}

@@ -40,14 +40,27 @@ $('button').click(function () {
 
     if ($(this).attr("value") === $('#correctanswer').attr("value")) {
 
-        $(this).css({ 'background-color': '#00E600' });
+        $(this).addClass('correct');
     }
 
     else
     {
-        $(this).css({ 'background-color': 'red' });
+        $(this).addClass('fail');
     }
+    
+});
 
+$('.nav-list').click(function () {
+    if ($('button').hasClass('correct'))
+    {
+        $('button').removeClass('correct');
+    }
+});
+
+$('.nav-list').click(function () {
+    if ($('button').hasClass('fail')) {
+        $('button').removeClass('fail');
+    }
 });
 
 ko.applyBindings(new ViewModel());
